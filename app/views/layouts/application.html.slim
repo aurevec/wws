@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+  meta name="viewport" content="width=device-width" initial-scale="1.0"
+    title
+      = yield :header_title
+      |  | #{ t("Wws")}
+
+    = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+
+    script type="text/javascript"
+      | var ready = function(){
+      |   new Wws.Views.SharedView();
+      = yield :javascripts if content_for? :javascripts
+      | };
+      | $(document).on("page:load", ready);
+      | $(document).ready(ready);
+
+  body
+    h1 TEST
+    = yield
