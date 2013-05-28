@@ -1,0 +1,16 @@
+fr:
+  wws: "World Wine Shop"
+  time_ago: Il y a
+  welcome: Bievenue
+  total_amount: Montant total
+  please_login: Veuillez vous authentifier
+  by: "par"
+  the: "le"
+  for: "pour"
+  title:
+    quick_search: Recherche rapide
+  no_db_results: Pas de résultats
+  actions: Actions
+  are_you_sure: Êtes-vous sûr ?
+  not_authorized_to_see: Vous n'êtes pas autorisé à voir cette page.
+  please_first_authenticate: Veuillez d'abord vous authentifier !
