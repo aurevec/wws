@@ -19,5 +19,17 @@ html
       | $(document).ready(ready);
 
   body
-    h1 TEST
-    = yield
+    .root
+      header
+        .logo
+
+        .user-action
+      
+      .menu
+        = render "navigations/main_menu"
+
+      .content
+        = yield
+
+      .facebook
+        h1 FACEBOOK
