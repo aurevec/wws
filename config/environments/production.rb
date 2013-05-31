@@ -77,4 +77,6 @@ Wws::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  config.assets.precompile += %w(backbone/wws)
 end
