@@ -21,4 +21,4 @@
 //= require backbone_datalink
 //= require backbone/wws
 //= require autoNumeric-1.7.5
-//= require_tree .
+//= require_self
