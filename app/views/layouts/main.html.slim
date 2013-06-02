@@ -29,6 +29,8 @@ html
         = yield :menu if content_for? :menu
 
       .content
+        = render "/shared/alerts", flash_messages: flash
+        
         = yield
 
       .facebook

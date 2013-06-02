@@ -1,0 +1,4 @@
+- if flash_messages.any?
+  - flash_messages.each do |type, message|
+    div.alert*{class: "alert-#{type}"} = message
+

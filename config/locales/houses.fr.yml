@@ -1,0 +1,20 @@
+fr:
+  house:
+    title:
+      new: "Nouvelle maison"
+      edit: "Maison %{house}: éditer"
+      show: "Maison: %{name}"
+      index: "Maison"
+
+  activerecord:
+    models:
+      houses: Maisons
+    attributes:
+      house:
+        name: Nom
+        country: Pays
+        region: Région
+        city: Ville
+        description: Descritpion
+        website: Site web
+        facebook_link: Lien Facebook

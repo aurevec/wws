@@ -1,0 +1,8 @@
+- if object.try(:errors).try(:any?)
+  section.error-box
+    header
+      h2 Il y a des erreurs dans ce formulaire !
+    section.content
+      ul
+        - object.errors.full_messages.each do |error|
+          li= error

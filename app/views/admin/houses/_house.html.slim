@@ -1,0 +1,11 @@
+tr
+  td = link_to house.name, edit_admin_house_path(house)
+  td = house.country
+  td = house.region
+  td = house.city
+  td
+    - if can? :destroy, house
+      = link_to admin_house_path(house), method: :delete, class: "btn" do
+        i.icon-trash
+    - else
+      | &nbsp;
