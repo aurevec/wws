@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130602080259) do
+ActiveRecord::Schema.define(version: 20130602184328) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,5 +45,18 @@ ActiveRecord::Schema.define(version: 20130602080259) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+
+  create_table "wines", force: true do |t|
+    t.string  "name"
+    t.string  "designation"
+    t.string  "vintage"
+    t.string  "variety"
+    t.text    "description"
+    t.integer "house_id"
+  end
+
+  add_index "wines", ["house_id"], name: "index_wines_on_house_id", using: :btree
+
+  add_foreign_key "wines", "houses", :name => "wines_house_id_fk"
 
 end

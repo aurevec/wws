@@ -1,0 +1,20 @@
+fr:
+  wine:
+    title:
+      new: "Nouveau vin"
+      edit: "Vin %{wine}: éditer"
+      show: "Vin: %{name}"
+      index: "Vins"
+
+  activerecord:
+    models:
+      wines: Vins
+    attributes:
+      wine:
+        name: Nom
+        designation: Appellation
+        vintage: Millésime
+        variety: Cépage
+        description: Description
+        house_id: Maison
+        house: Maison

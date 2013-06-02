@@ -4,7 +4,7 @@ fr:
       new: "Nouvelle maison"
       edit: "Maison %{house}: éditer"
       show: "Maison: %{name}"
-      index: "Maison"
+      index: "Maisons"
 
   activerecord:
     models:

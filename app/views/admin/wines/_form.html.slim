@@ -1,0 +1,10 @@
+= simple_form_for [:admin, wine], html: { class: 'form-horizontal' } do |f|
+  = f.input :name
+  = f.input :designation
+  = f.input :vintage
+  = f.input :variety
+  = f.input :description
+  = f.association :house
+
+  .form-actions
+    = f.submit 'Enregistrer', class: "btn btn-success"

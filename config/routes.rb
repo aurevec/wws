@@ -6,6 +6,7 @@ Wws::Application.routes.draw do
     root 'index#index'
 
     resources :houses
+    resources :wines
   end
 
 end

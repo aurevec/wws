@@ -4,3 +4,7 @@ fr:
       create: "La nouvelle maison a bien été créée"
       update: "Cette maison a bien été éditée"
       destroy: "Cette maison a bien été supprimée"
+    wine:
+      create: "Le nouveau vin a bien été créé"
+      update: "Ce vin a bien été édité"
+      destroy: "Ce vin a bien été supprimé"

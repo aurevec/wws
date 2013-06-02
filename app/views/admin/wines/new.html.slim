@@ -1,0 +1,5 @@
+- content_for :header_title do
+  = t("wine.title.new")
+
+h1 Création d'un vin
+= render "form", wine: @wine

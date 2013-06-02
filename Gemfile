@@ -16,6 +16,8 @@ gem 'authlogic',                  '3.3.0'
 gem "active_model_serializers",   '0.8.1'
 gem 'draper',                     '1.2.0'
 gem 'pg_search',                  '0.6.1'
+gem "foreigner",                  '~> 1.4.1'
+gem "immigrant",                  '~> 0.1.4'
 gem 'jquery-rails',               '~>  2.1.4'
 gem "mime-types",                 '1.23'
 gem 'bootstrap-datepicker-rails', :require => 'bootstrap-datepicker-rails',
