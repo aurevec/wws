@@ -35,9 +35,9 @@ header {
   .logo {
     width: 200px;
     min-height: 100%;
-    background: #93c01f;
     position: relative;
     float: left;
+    background: #93c01f image-url("wws_logo.png") no-repeat center center;
   }
 
   .user-action {
