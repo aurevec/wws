@@ -5,7 +5,7 @@ tr
   td = house.city
   td
     - if can? :destroy, house
-      = link_to admin_house_path(house), method: :delete, class: "btn" do
+      = link_to admin_houses_path(house), method: :delete, class: "btn" do
         i.icon-trash
     - else
       | &nbsp;

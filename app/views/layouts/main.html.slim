@@ -29,6 +29,8 @@ html
         = yield :menu if content_for? :menu
 
       .content
+        = yield :breadcrumb if content_for? :breadcrumb
+
         = render "/shared/alerts", flash_messages: flash
         
         = yield

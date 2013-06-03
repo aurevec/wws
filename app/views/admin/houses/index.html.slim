@@ -1,5 +1,13 @@
 - content_for :header_title do
   = t("house.title.index")
+
+- content_for :breadcrumb do
+  ul.breadcrumb
+    li.first 
+      = link_to "Admin", admin_root_path() 
+      span.divider >
+    li Maisons
+
 a= link_to "Créer une maison", new_admin_house_path
 
 table class="table table-striped table-condensed"

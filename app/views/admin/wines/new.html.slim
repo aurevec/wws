@@ -1,5 +1,15 @@
 - content_for :header_title do
   = t("wine.title.new")
 
+- content_for :breadcrumb do
+  ul.breadcrumb
+    li.first 
+      = link_to "Admin", admin_root_path() 
+      span.divider >
+    li 
+      = link_to "Vins", admin_wines_path()
+      span.divider >
+    li.active Créer  
+
 h1 Création d'un vin
 = render "form", wine: @wine
