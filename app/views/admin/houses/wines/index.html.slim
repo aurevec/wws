@@ -29,12 +29,16 @@ table class="table table-striped table-condensed"
         = Wine.human_attribute_name(:variety).humanize
       th
         = Wine.human_attribute_name(:house_id).humanize  
-      th
-        = t("actions")
   tbody
     - if @house.wines.any?
-      = render @house.wines
+      - @house.wines.each do |wine|
+        tr
+          td = link_to wine.name, edit_admin_wine_path(wine)
+          td = wine.designation
+          td = wine.vintage
+          td = wine.variety
+          td = wine.house.name
     - else
       tr
-        td colspan="6"
+        td colspan="5"
           = t("no_db_results")
