@@ -11,5 +11,7 @@
       span.divider >
     li.active Créer  
 
-h1 Création d'une maison
+- content_for :page_title do
+  = t("house.title.new")
+
 = render "form", house: @house

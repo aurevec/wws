@@ -31,6 +31,9 @@ html
       .content
         = yield :breadcrumb if content_for? :breadcrumb
 
+        - if content_for? :page_title
+          h1 = yield :page_title
+
         = render "/shared/alerts", flash_messages: flash
         
         = yield

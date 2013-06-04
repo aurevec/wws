@@ -8,6 +8,9 @@
       span.divider >
     li Vins
 
+- content_for :page_title do
+  = t("wine.title.index")      
+
 a= link_to "Créer un vin", new_admin_wine_path
 
 table class="table table-striped table-condensed"

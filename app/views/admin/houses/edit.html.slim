@@ -11,5 +11,7 @@
       span.divider >
     li.active Editer
 
-h1 Edition d'une maison
+- content_for :page_title do
+  = t("house.title.edit", house: @house.name)
+
 = render "form", house: @house
