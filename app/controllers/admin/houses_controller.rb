@@ -32,7 +32,7 @@ class Admin::HousesController < Admin::AdminController
 
   def destroy
     @house.destroy if @house.destroyable?
-    redirect_to houses_url(), notice: t("flash_messages.house.destroy")
+    redirect_to admin_houses_url(), notice: t("flash_messages.house.destroy")
   end
 
   private

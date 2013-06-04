@@ -5,7 +5,9 @@ Wws::Application.routes.draw do
   namespace :admin do
     root 'index#index'
 
-    resources :houses
+    resources :houses do
+    	resources :wines, only: :index
+    end
     resources :wines
   end
 

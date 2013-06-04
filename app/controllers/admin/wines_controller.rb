@@ -2,8 +2,10 @@
 class Admin::WinesController < Admin::AdminController
   authorize_resource
   load_resource except: :create
+  load_and_authorize_resource :house, through: :wine, shallow: true
 
   def index
+    render "/admin/houses/wines/index" if @house
   end
 
   def new
@@ -32,7 +34,7 @@ class Admin::WinesController < Admin::AdminController
 
   def destroy
     @wine.destroy if @wine.destroyable?
-    redirect_to wines_url(), notice: t("flash_messages.wine.destroy")
+    redirect_to admin_wines_url(), notice: t("flash_messages.wine.destroy")
   end
 
   private

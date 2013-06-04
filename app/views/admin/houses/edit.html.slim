@@ -11,6 +11,8 @@
       span.divider >
     li.active Editer
 
+= render "menu", selected: :house, house: @house    
+
 - content_for :page_title do
   = t("house.title.edit", house: @house.name)
 
