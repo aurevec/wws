@@ -4,9 +4,3 @@ tr
   td = wine.vintage
   td = wine.variety
   td = wine.house.name
-  td
-    - if can? :destroy, wine
-      = link_to admin_wine_path(wine), method: :delete, class: "btn" do
-        i.icon-trash
-    - else
-      | &nbsp;
