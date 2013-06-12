@@ -8,3 +8,7 @@ fr:
       create: "Le nouveau vin a bien été créé"
       update: "Ce vin a bien été édité"
       destroy: "Ce vin a bien été supprimé"
+    sale:
+      create: "La nouvelle vente a bien été créée"
+      update: "Cette vente a bien été éditée"
+      destroy: "Cette vente a bien été supprimée"

@@ -1,0 +1,9 @@
+= simple_form_for [:admin, sale], html: { class: 'form-horizontal' } do |f|
+  = f.association :house
+  = f.input :begin_date, as: :date_picker, input_html: { class: "span2 begin-date" }
+  = f.input :end_date, as: :date_picker, input_html: { class: "span2 end-date" }
+  = f.input :limit_for_validation, input_html: { step: 1, min: 0, value: ( f.object.limit_for_validation || 10 ), class: "span2" }
+  = f.input :limit_date, as: :date_picker, input_html: { class: "span2 limit-date" }
+
+  .form-actions
+    = f.submit 'Enregistrer', class: "btn btn-success"

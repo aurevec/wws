@@ -1,0 +1,15 @@
+#= require jquery
+#= require jquery-ui
+#= require jquery_ujs
+#= require turbolinks
+#= require underscore
+#= require bootstrap
+#= require bootstrap-datepicker
+#= require backbone
+#= require backbone_rails_sync
+#= require backbone_datalink
+#= require_tree ../../../vendor/assets/javascripts
+#= require chosen-jquery
+#= require backbone/wws
+#= require autoNumeric-1.7.5
+#= require_tree .

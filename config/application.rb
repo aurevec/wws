@@ -24,8 +24,6 @@ module Wws
 
     config.i18n.default_locale = :fr
 
-    config.assets.initialize_on_precompile = false
-
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif *.svg *.eot *.woff *.ttf)
 
     config.assets.paths << "#{Rails.root}/app/assets/fonts"

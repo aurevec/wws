@@ -1,0 +1,10 @@
+tr
+  td = link_to sale.house_name, edit_admin_sale_path(sale)
+  td = sale.begin_date
+  td = sale.end_date
+  td
+    - if can? :destroy, sale
+      = link_to admin_sale_path(sale), method: :delete, class: "btn" do
+        i.icon-trash
+    - else
+      | &nbsp;

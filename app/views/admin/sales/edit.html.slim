@@ -1,0 +1,17 @@
+- content_for :header_title do
+  = t("sale.title.edit", sale: @sale.name)
+
+- content_for :breadcrumb do
+  ul.breadcrumb
+    li.first 
+      = link_to "Admin", admin_root_path() 
+      span.divider >
+    li 
+      = link_to "Ventes", admin_sales_path()
+      span.divider >
+    li.active Editer
+
+- content_for :page_title do
+  = t("sale.title.edit", sale: @sale.name)
+
+= render "form", sale: @sale

@@ -1,7 +1,9 @@
-#= require_self
-#= require bootstrap-datepicker
+#= require_tree ../../../vendor/assets/stylesheets
 #= require font-awesome.min
+#= require chosen
+#= require bootstrap-datepicker
 #= require_tree ./views
+#= require_self
 
 @import "bootstrap";
 @import "bootstrap-responsive";

@@ -1,0 +1,20 @@
+fr:
+  sale:
+    title:
+      new: "Nouvelle vente"
+      edit: "Vente %{sale}: éditer"
+      show: "Vente: %{name}"
+      index: "Ventes"
+
+  activerecord:
+    models:
+      sales: Ventes
+    attributes:
+      sale:
+        begin_date: Date de début
+        end_date: Date de fin
+        limit_for_validation: Nombre limite pour validation
+        house: Maison
+        house_id: Maison
+        name: Nom
+        limit_date: Date limite de validation

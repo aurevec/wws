@@ -12,7 +12,7 @@ html
 
     script type="text/javascript"
       | var ready = function(){
-      |   new Wws.Views.SharedView();
+      |   new Wws.Views.AdminView();
       = yield :javascripts if content_for? :javascripts
       | };
       | $(document).on("page:load", ready);

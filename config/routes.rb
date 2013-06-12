@@ -9,6 +9,8 @@ Wws::Application.routes.draw do
     	resources :wines, only: :index
     end
     resources :wines
+
+    resources :sales
   end
 
 end
