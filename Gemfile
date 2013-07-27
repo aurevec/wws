@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 
-ruby "1.9.3"
+ruby "2.0.0"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0.rc1'
+gem 'rails', '4.0.0'
 
 gem 'pg',                         '0.15.1'
 gem 'pg_search',                  '0.6.1'
@@ -11,6 +11,7 @@ gem "slim",                       '~> 2.0.0'
 gem 'cancan',                     '1.6.9'
 gem "devise",                     '~> 3.0.0.rc'
 gem "simple_form",                '3.0.0.rc'
+gem "cocoon",                     '~> 1.2.0'
 gem "country_select",             '~> 1.1.3'
 gem 'authlogic',                  '3.3.0'
 gem "active_model_serializers",   '0.8.1'

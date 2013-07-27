@@ -1,7 +1,10 @@
+$dark-grey:        #A8A8A8;
+
 html{
 	height: 100%;
 }
 body {
+  font-size: 12px;
   background-color: #000000;
   position: relative;
   min-height: 100%;
@@ -60,6 +63,7 @@ header {
 }
 
 .menu {
+  font-size: 14px;
   position: fixed;
   left: 50px;
   top: 210px;
@@ -75,6 +79,89 @@ header {
   a {
     color: #93c01f;
   }
+}
+
+.right{
+  text-align: right;
+}
+
+.left{
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.btn-add {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.action-btn-add{
+  margin-bottom: 10px;
+}
+
+.btn-add-file {
+  margin-top: 10px;
+}
+
+.nested-fields {
+  padding-top: 20px;
+  width: 400px;
+  border-bottom: 1px dotted $dark-grey;
+  padding-bottom: 8px;
+  .control-group{
+    padding-bottom: 5px;
+  }
+
+  .btn-delete-file {
+    margin-left: 15px;
+  }
+}
+
+.form-horizontal .form-actions{
+  @extend .clear-fix;
+  padding: 11px;
+  position: relative;
+  @include border-radius(4px 4px 4px 4px);
+  border: 1px solid #dddddd;
+}
+
+.form-horizontal .controls {
+  margin: 0;
+}
+
+form .bootstrap-tip{
+  padding-left: 118px;
+}
+
+form .required:after, form.simple_form th.required:after {
+  color: #e32;
+  content: ' *';
+  display:inline;
+}
+
+form {
+  .form-separator {
+    margin: 0px 12px;
+    float: left;
+
+    label {
+      display: inline-block;
+    }
+
+  }
+
+  .form-separator.border{
+    border-right: 1px solid $dark-grey;
+    padding-right: 10px;
+  }
+}
+
+.form-horizontal .control-label {
+  padding-top: 0;
 }
 
 .facebook {

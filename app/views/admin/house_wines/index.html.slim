@@ -3,15 +3,15 @@
 
 - content_for :breadcrumb do
   ul.breadcrumb
-    li.first 
-      = link_to "Admin", admin_root_path() 
+    li.first
+      = link_to "Admin", admin_root_path()
       span.divider >
-    li 
+    li
       = link_to "Maisons", admin_houses_path()
       span.divider >
     li.active Editer
 
-= render "admin/houses/menu", selected: :wines, house: @house    
+= render "admin/houses/menu", selected: :wines, house: @house
 
 - content_for :page_title do
   = t("house.title.edit", house: @house.name)
@@ -28,7 +28,7 @@ table class="table table-striped table-condensed"
       th
         = Wine.human_attribute_name(:variety).humanize
       th
-        = Wine.human_attribute_name(:house_id).humanize  
+        = Wine.human_attribute_name(:house_id).humanize
   tbody
     - if @house.wines.any?
       - @house.wines.each do |wine|

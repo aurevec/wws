@@ -39,6 +39,6 @@ class Admin::SalesController < Admin::AdminController
   private
 
   def sale_params
-    params.require(:sale).permit(:house_id, :begin_date, :end_date, :limit_for_validation, :limit_date)
+    params.require(:sale).permit! #(:house_id, :begin_date, :end_date, :limit_for_validation, :limit_date, :sale_wines_attributes)
   end
 end

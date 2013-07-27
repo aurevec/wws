@@ -1,0 +1,19 @@
+fr:
+  sale_wine:
+    title:
+      new: "Nouvelle vente"
+      edit: "Vente %{sale}: éditer"
+      show: "Vente: %{name}"
+      index: "Ventes"
+
+  activerecord:
+    models:
+      sale_wines: Vins en vente
+    attributes:
+      sale_wine:
+        begin_date: Date de début
+        end_date: Date de fin
+        sale_id: Vente
+        sale: Vente
+        wine_id: Vin
+        wine: Vin

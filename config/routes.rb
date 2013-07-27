@@ -6,11 +6,14 @@ Wws::Application.routes.draw do
     root 'index#index'
 
     resources :houses do
-    	resources :wines, only: :index
+    	resources :house_wines, only: :index, as: :wines
     end
-    resources :wines
 
-    resources :sales
+    resources :sales do
+      resources :sale_wines, only: :index, as: :wines
+    end
+
+    resources :wines
   end
 
 end

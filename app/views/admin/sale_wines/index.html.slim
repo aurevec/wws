@@ -1,0 +1,36 @@
+- content_for :header_title do
+  = t("sale.title.edit", sale: @sale.name)
+
+- content_for :breadcrumb do
+  ul.breadcrumb
+    li.first
+      = link_to "Admin", admin_root_path()
+      span.divider >
+    li
+      = link_to "Ventes", admin_sales_path()
+      span.divider >
+    li.active Editer
+
+= render "admin/sales/menu", selected: :wines, sale: @sale
+
+- content_for :page_title do
+  = t("sale.title.edit", sale: @sale.name)
+
+#sale-wines
+  = simple_form_for [:admin, @sale], html: { class: 'form-horizontal' } do |f|
+    table
+      thead
+        tr
+          th.left width="70%" Vin
+          th.center width="30%" Actions
+
+      tbody#tbody
+        = f.simple_fields_for :sale_wines do |sale_wine|
+          = render 'sale_wine_fields', f: sale_wine, render_options: { wrapper: 'bootstrap' }
+
+    .links
+      = link_to_add_association f, :sale_wines , partial: "sale_wine_fields", data: { "association-insertion-node" => "#tbody", "association-insertion-method" => "append" }, class: "btn", render_options: {:wrapper => 'bootstrap' } do
+        i.icon-plus-sign.icon-large
+        | Ajouter un vin
+
+    = f.submit

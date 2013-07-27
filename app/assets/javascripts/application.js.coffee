@@ -5,6 +5,7 @@
 #= require underscore
 #= require bootstrap
 #= require bootstrap-datepicker
+#= require cocoon
 #= require backbone
 #= require backbone_rails_sync
 #= require backbone_datalink

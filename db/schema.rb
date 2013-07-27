@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130605190607) do
+ActiveRecord::Schema.define(version: 20130614195850) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,16 @@ ActiveRecord::Schema.define(version: 20130605190607) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "sale_wines", force: true do |t|
+    t.integer  "sale_id"
+    t.integer  "wine_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "sale_wines", ["sale_id"], name: "index_sale_wines_on_sale_id", using: :btree
+  add_index "sale_wines", ["wine_id"], name: "index_sale_wines_on_wine_id", using: :btree
 
   create_table "sales", force: true do |t|
     t.integer  "house_id"
@@ -68,6 +78,9 @@ ActiveRecord::Schema.define(version: 20130605190607) do
   end
 
   add_index "wines", ["house_id"], name: "index_wines_on_house_id", using: :btree
+
+  add_foreign_key "sale_wines", "sales", :name => "sale_wines_sale_id_fk"
+  add_foreign_key "sale_wines", "wines", :name => "sale_wines_wine_id_fk"
 
   add_foreign_key "wines", "houses", :name => "wines_house_id_fk"
 

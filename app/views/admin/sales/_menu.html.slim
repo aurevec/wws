@@ -1,0 +1,4 @@
+ul class= ['nav', 'nav-tabs']
+  li class= ((selected == :sale)   ? "active" : nil ) = link_to("Vente",	edit_admin_sale_path(sale))
+  li class= ((selected == :wines)   ? "active" : nil ) = link_to("Vins",		admin_sale_wines_path(sale))
+ 

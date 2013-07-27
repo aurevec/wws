@@ -5,7 +5,6 @@ class Admin::WinesController < Admin::AdminController
   load_and_authorize_resource :house, through: :wine, shallow: true
 
   def index
-    render "/admin/houses/wines/index" if @house
   end
 
   def new
